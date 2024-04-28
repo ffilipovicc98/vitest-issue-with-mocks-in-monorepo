@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "test",
+			"path": "apps/test-app",
+			"group": "test",
+			"problemMatcher": [],
+			"label": "npm: test - apps/test-app",
+			"detail": "vitest run"
+		}
+	]
+}
