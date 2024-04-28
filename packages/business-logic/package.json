@@ -1,0 +1,21 @@
+{
+	"name": "business-logic",
+	"version": "1.0.0",
+	"main": "src",
+	"sideEffects": false,
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"lint": "TIMING=1 eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+		"lint:fix": "eslint src --ext ts,tsx --fix",
+		"clean": "rimraf ./.cache ./dist ./node_modules ./.turbo ./.firebase"
+	},
+	"dependencies": {
+		"dayjs": "^1.11.10",
+		"viem": "~2.4.1",
+		"wagmi": "^2.3.1",
+		"wait": "^0.4.2",
+		"wallet-connection": "workspace:*",
+		"zod": "^3.21.4"
+	}
+}
