@@ -40,8 +40,6 @@ it("test", async () => {
     connector: testConfig.connectors[0],
   });
 
-  console.log({ accounts });
-
   mocks.writeContract.mockImplementationOnce(() => zeroAddress);
 
   const result = await approve({
@@ -50,13 +48,7 @@ it("test", async () => {
     amount: 1.22,
   });
 
-  console.log({ result });
-
   expect(mocks.writeContract).toHaveBeenCalledOnce();
-  
-  console.log({
-    "mocks.writeContract.mock.lastCall": mocks.writeContract.mock.lastCall,
-  });
 
   expect(mocks.writeContract.mock.lastCall[1].address).toBe(
     "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266"
